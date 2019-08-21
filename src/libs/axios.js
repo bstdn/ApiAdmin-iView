@@ -18,8 +18,8 @@ class HttpRequest {
     // 响应拦截
     instance.interceptors.response.use(response => {
       const res = response.data
-      if (res.code !== 20000) {
-        if (res.code === 50014) {
+      if (res.code !== 0) {
+        if (res.code === -14) {
           iView.Modal.confirm({
             title: '重新登录',
             content: '你已被登出，可以取消继续留在该页面，或者重新登录',
@@ -31,9 +31,9 @@ class HttpRequest {
             }
           })
         } else {
-          iView.Message.error(res.message)
+          iView.Message.error(res.msg)
         }
-        throw new Error(res.message)
+        throw new Error(res.msg)
       } else {
         return response.data
       }

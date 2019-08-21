@@ -44,6 +44,7 @@ import Language from './components/language'
 import Fullscreen from './components/fullscreen'
 import minLogo from '@/assets/images/logo-min.jpg'
 import maxLogo from '@/assets/images/logo.jpg'
+import defaultImg from '@/assets/images/default-img.jpg'
 import routers from '@/router/routers'
 import { getNewTagList, routeEqual } from '@/libs/util'
 
@@ -71,7 +72,7 @@ export default {
       return this.$store.state.app.tagNavList
     },
     userAvatar() {
-      return this.$store.state.user.userInfo.avatar
+      return JSON.stringify(this.$store.state.user.userInfo) !== '{}' && this.$store.state.user.userInfo.userData.head_img ? this.$store.state.user.userInfo.userData.head_img : defaultImg
     },
     cacheList() {
       return ['ParentView', ...this.tagNavList.length ? this.tagNavList.filter(item => !(item.meta && item.meta.notCache)).map(item => item.name) : []]

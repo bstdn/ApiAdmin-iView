@@ -3,7 +3,6 @@
     <div class="login-con">
       <Card icon="md-log-in" title="欢迎登录" :bordered="false">
         <div class="form-con">
-          <!-- eslint-disable -->
           <Form ref="loginForm" :model="form" :rules="rules">
             <FormItem prop="username">
               <Input v-model="form.username" placeholder="请输入用户名">
@@ -15,8 +14,8 @@
                 <Icon slot="prepend" :size="14" type="md-lock" />
               </Input>
             </FormItem>
-            <FormItem style="margin-bottom: 15px;">
-              <Button type="primary" long @click="handleSubmit" :loading="loading">登录</Button>
+            <FormItem class="margin-bottom-15">
+              <Button type="primary" long :loading="loading" @click="handleSubmit">登录</Button>
             </FormItem>
           </Form>
         </div>
@@ -31,8 +30,8 @@ export default {
   data() {
     return {
       form: {
-        username: 'admin',
-        password: '111111'
+        username: '',
+        password: ''
       },
       rules: {
         username: [
