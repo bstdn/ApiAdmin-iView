@@ -34,6 +34,26 @@ export default [
     ]
   },
   {
+    path: '/system',
+    name: 'system_setting',
+    meta: {
+      icon: 'ios-build',
+      title: '系统配置'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'menu',
+        name: 'menu_setting',
+        meta: {
+          icon: 'md-menu',
+          title: '菜单维护'
+        },
+        component: () => import('@/view/system/menu')
+      }
+    ]
+  },
+  {
     path: '/401',
     name: 'error_401',
     meta: {
