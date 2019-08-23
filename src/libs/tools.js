@@ -33,6 +33,24 @@ export const oneOf = (value, validList) => {
   return false
 }
 
+const getHandledValue = num => {
+  return num < 10 ? '0' + num : num
+}
+
+export const getDate = (timeStamp, startType) => {
+  const d = new Date(timeStamp * 1000)
+  const year = d.getFullYear()
+  const month = getHandledValue(d.getMonth() + 1)
+  const date = getHandledValue(d.getDate())
+  const hours = getHandledValue(d.getHours())
+  const minutes = getHandledValue(d.getMinutes())
+  const second = getHandledValue(d.getSeconds())
+  let resStr = ''
+  if (startType === 'year') resStr = year + '-' + month + '-' + date + ' ' + hours + ':' + minutes + ':' + second
+  else resStr = month + '-' + date + ' ' + hours + ':' + minutes
+  return resStr
+}
+
 export const on = (function() {
   if (document.addEventListener) {
     return function(element, event, handler) {

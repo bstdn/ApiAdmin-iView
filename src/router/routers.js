@@ -50,6 +50,15 @@ export default [
           title: '菜单维护'
         },
         component: () => import('@/view/system/menu')
+      },
+      {
+        path: 'log',
+        name: 'logs',
+        meta: {
+          icon: 'md-clipboard',
+          title: '操作日志'
+        },
+        component: () => import('@/view/system/log')
       }
     ]
   },
