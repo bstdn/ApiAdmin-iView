@@ -52,6 +52,15 @@ export default [
         component: () => import('@/view/system/menu')
       },
       {
+        path: 'user',
+        name: 'user_setting',
+        meta: {
+          icon: 'ios-people',
+          title: '用户管理'
+        },
+        component: () => import('@/view/system/user')
+      },
+      {
         path: 'log',
         name: 'logs',
         meta: {
