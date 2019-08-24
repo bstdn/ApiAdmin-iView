@@ -73,3 +73,11 @@ export const del = (id) => {
     }
   })
 }
+
+export const own = (data) => {
+  return axios.request({
+    url: '/User/own',
+    method: 'post',
+    data
+  })
+}

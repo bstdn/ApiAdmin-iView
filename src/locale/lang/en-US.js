@@ -13,5 +13,6 @@ export default {
   open_choose: 'Open',
   close_choose: 'Close',
   show_choose: 'Show',
-  hide_choose: 'Hide'
+  hide_choose: 'Hide',
+  user_center: 'User Center'
 }

@@ -30,6 +30,17 @@ export default [
           icon: 'md-home'
         },
         component: () => import('@/view/single-page/home')
+      },
+      {
+        path: '/user-center',
+        name: 'user_center',
+        meta: {
+          hideInMenu: true,
+          title: '个人中心',
+          notCache: true,
+          icon: 'md-home'
+        },
+        component: () => import('@/view/single-page/own/index')
       }
     ]
   },
