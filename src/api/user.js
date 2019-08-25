@@ -81,3 +81,11 @@ export const own = (data) => {
     data
   })
 }
+
+export const getUsers = (params) => {
+  return axios.request({
+    url: '/User/getUsers',
+    method: 'get',
+    params
+  })
+}

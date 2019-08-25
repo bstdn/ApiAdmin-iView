@@ -4,6 +4,7 @@ export default {
   system_setting: 'System Setting',
   menu_setting: 'Menu Setting',
   user_setting: 'User Setting',
+  auth_setting: 'Auth Setting',
   logs: 'Logs',
   add_button: 'Add',
   edit_button: 'Edit',
