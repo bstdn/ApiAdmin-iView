@@ -9,6 +9,12 @@ git clone https://github.com/bstdn/vue-iview-api-admin.git
 cd vue-iview-api-admin
 ```
 
+### Prepare
+
+```
+# src/config/index.js中的baseUrl修改为后台接口地址
+```
+
 ### Project setup
 
 ```
