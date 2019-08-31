@@ -23,9 +23,7 @@ export default {
   methods: {
     logout() {
       this.$store.dispatch('user/logout').then(() => {
-        this.$router.push({
-          name: 'login'
-        })
+        location.reload()
       })
     },
     handleClick(name) {

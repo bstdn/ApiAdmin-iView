@@ -13,36 +13,38 @@ const router = new Router({
   routes: routes
 })
 
+const whiteList = ['/login']
+
 router.beforeEach((to, from, next) => {
   iView.LoadingBar.start()
-  const token = getToken()
-  if (!token && to.name !== 'login') {
-    next({
-      name: 'login'
-    })
-  } else if (!token && to.name === 'login') {
-    next()
-  } else if (token && to.name === 'login') {
-    next({
-      name: 'home'
-    })
-  } else {
-    store.dispatch('user/getInfo').then(user => {
-      if (to.meta && to.meta.access) {
-        if (oneOf(to.meta.access, user.access)) {
-          next()
+  if (getToken()) {
+    if (to.path === '/login') {
+      next({ path: '/' })
+      iView.LoadingBar.finish()
+    } else {
+      store.dispatch('user/getInfo').then(user => {
+        if (to.meta && to.meta.access) {
+          if (oneOf(to.meta.access, user.access)) {
+            next()
+          } else {
+            next({ replace: true, name: 'error_401' })
+          }
         } else {
-          next({ replace: true, name: 'error_401' })
+          next()
         }
-      } else {
-        next()
-      }
-    }).catch(() => {
-      setToken('')
-      next({
-        name: 'login'
+      }).catch(() => {
+        setToken('')
+        next(`/login?redirect=${to.path}`)
+        iView.LoadingBar.finish()
       })
-    })
+    }
+  } else {
+    if (whiteList.indexOf(to.path) !== -1) {
+      next()
+    } else {
+      next(`/login?redirect=${to.path}`)
+      iView.LoadingBar.finish()
+    }
   }
 })
 

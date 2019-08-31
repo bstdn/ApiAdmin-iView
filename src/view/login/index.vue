@@ -41,7 +41,16 @@ export default {
           { required: true, message: '密码不能为空', trigger: 'blur' }
         ]
       },
-      loading: false
+      loading: false,
+      redirect: undefined
+    }
+  },
+  watch: {
+    $route: {
+      handler: function(route) {
+        this.redirect = route.query && route.query.redirect
+      },
+      immediate: true
     }
   },
   methods: {
@@ -50,9 +59,7 @@ export default {
         if (valid) {
           this.loading = true
           this.$store.dispatch('user/login', this.form).then(() => {
-            this.$router.push({
-              name: 'home'
-            })
+            this.$router.push({ path: this.redirect || '/' })
             this.loading = false
           }).catch(() => {
             this.loading = false
