@@ -98,6 +98,28 @@ export default [
     ]
   },
   {
+    path: '/interface',
+    name: 'InterfaceSetting',
+    meta: {
+      icon: 'ios-link',
+      title: '接口管理',
+      access: ['admin/InterfaceGroup/index']
+    },
+    component: Main,
+    children: [
+      {
+        path: 'interfaceGroup',
+        name: 'InterfaceGroup',
+        meta: {
+          icon: 'md-archive',
+          title: '接口分组',
+          access: 'admin/InterfaceGroup/index'
+        },
+        component: () => import('@/view/interface/group')
+      }
+    ]
+  },
+  {
     path: '/401',
     name: 'Error401',
     meta: {

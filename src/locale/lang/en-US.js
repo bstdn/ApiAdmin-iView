@@ -6,6 +6,8 @@ export default {
   SystemUser: 'User Setting',
   SystemAuth: 'Auth Setting',
   SystemLog: 'Logs',
+  InterfaceSetting: 'Interface Setting',
+  InterfaceGroup: 'Interface Group',
   add_button: 'Add',
   edit_button: 'Edit',
   delete_button: 'Delete',

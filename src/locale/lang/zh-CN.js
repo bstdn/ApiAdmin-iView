@@ -6,6 +6,8 @@ export default {
   SystemUser: '用户管理',
   SystemAuth: '权限管理',
   SystemLog: '操作日志',
+  InterfaceSetting: '接口设置',
+  InterfaceGroup: '接口分组',
   add_button: '新增',
   edit_button: '编辑',
   delete_button: '删除',
