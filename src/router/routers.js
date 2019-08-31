@@ -33,7 +33,7 @@ export default [
       },
       {
         path: '/user-center',
-        name: 'user_center',
+        name: 'OwnIndex',
         meta: {
           hideInMenu: true,
           title: '个人中心',
@@ -47,7 +47,7 @@ export default [
   },
   {
     path: '/system',
-    name: 'system_setting',
+    name: 'SystemSetting',
     meta: {
       icon: 'ios-build',
       title: '系统配置',
@@ -57,7 +57,7 @@ export default [
     children: [
       {
         path: 'menu',
-        name: 'menu_setting',
+        name: 'SystemMenu',
         meta: {
           icon: 'md-menu',
           title: '菜单维护',
@@ -67,7 +67,7 @@ export default [
       },
       {
         path: 'user',
-        name: 'user_setting',
+        name: 'SystemUser',
         meta: {
           icon: 'ios-people',
           title: '用户管理',
@@ -77,7 +77,7 @@ export default [
       },
       {
         path: 'auth',
-        name: 'auth_setting',
+        name: 'SystemAuth',
         meta: {
           icon: 'md-lock',
           title: '权限管理',
@@ -87,7 +87,7 @@ export default [
       },
       {
         path: 'log',
-        name: 'logs',
+        name: 'SystemLog',
         meta: {
           icon: 'md-clipboard',
           title: '操作日志',
@@ -99,7 +99,7 @@ export default [
   },
   {
     path: '/401',
-    name: 'error_401',
+    name: 'Error401',
     meta: {
       hideInMenu: true
     },
@@ -107,7 +107,7 @@ export default [
   },
   {
     path: '/500',
-    name: 'error_500',
+    name: 'Error500',
     meta: {
       hideInMenu: true
     },
@@ -115,7 +115,7 @@ export default [
   },
   {
     path: '*',
-    name: 'error_404',
+    name: 'Error404',
     meta: {
       hideInMenu: true
     },
