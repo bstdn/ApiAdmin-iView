@@ -103,7 +103,7 @@ export default [
     meta: {
       icon: 'ios-link',
       title: '接口管理',
-      access: ['admin/InterfaceGroup/index']
+      access: ['admin/InterfaceGroup/index', 'admin/InterfaceList/index']
     },
     component: Main,
     children: [
@@ -116,6 +116,34 @@ export default [
           access: 'admin/InterfaceGroup/index'
         },
         component: () => import('@/view/interface/group')
+      },
+      {
+        path: 'interfaceList',
+        name: 'InterfaceList',
+        meta: {
+          icon: 'md-infinite',
+          title: '接口列表',
+          access: 'admin/InterfaceList/index'
+        },
+        component: () => import('@/view/interface/list')
+      },
+      {
+        path: 'request/:hash',
+        name: 'InterfaceRequest',
+        meta: {
+          title: '请求参数',
+          hideInMenu: true
+        },
+        component: () => import('@/view/interface/request')
+      },
+      {
+        path: 'response/:hash',
+        name: 'InterfaceResponse',
+        meta: {
+          title: '返回参数',
+          hideInMenu: true
+        },
+        component: () => import('@/view/interface/response')
       }
     ]
   },
