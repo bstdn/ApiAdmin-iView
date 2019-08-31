@@ -6,6 +6,8 @@ export default {
   SystemUser: 'User Setting',
   SystemAuth: 'Auth Setting',
   SystemLog: 'Logs',
+  AppSetting: 'Apps Setting',
+  AppGroup: 'Apps Group',
   InterfaceSetting: 'Interface Setting',
   InterfaceGroup: 'Interface Group',
   InterfaceList: 'Interface List',

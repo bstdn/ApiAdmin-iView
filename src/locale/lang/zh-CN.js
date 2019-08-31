@@ -6,6 +6,8 @@ export default {
   SystemUser: '用户管理',
   SystemAuth: '权限管理',
   SystemLog: '操作日志',
+  AppSetting: '应用接入',
+  AppGroup: '应用分组',
   InterfaceSetting: '接口设置',
   InterfaceGroup: '接口分组',
   InterfaceList: '接口列表',

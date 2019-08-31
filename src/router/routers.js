@@ -98,6 +98,29 @@ export default [
     ]
   },
   {
+    path: '/apps',
+    name: 'AppSetting',
+    meta: {
+      icon: 'md-cloud',
+      title: '应用接入',
+      access: ['admin/AppGroup/index']
+    },
+    component: Main,
+    children: [
+      {
+        path: 'appsGroup',
+        name: 'AppGroup',
+        meta: {
+          icon: 'ios-archive',
+          title: '应用分组',
+          access: 'admin/AppGroup/index'
+        },
+        component: () => import('@/view/app/group')
+      }
+    ]
+  },
+
+  {
     path: '/interface',
     name: 'InterfaceSetting',
     meta: {
