@@ -4,7 +4,7 @@ export const getList = (params) => {
   return axios.request({
     url: 'Log/index',
     method: 'get',
-    params: params
+    params
   })
 }
 
@@ -13,7 +13,7 @@ export const del = (id) => {
     url: 'Log/del',
     method: 'get',
     params: {
-      id: id
+      id
     }
   })
 }

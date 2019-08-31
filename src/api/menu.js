@@ -2,25 +2,25 @@ import axios from '@/libs/api.request'
 
 export const getList = () => {
   return axios.request({
-    url: '/Menu/index',
+    url: 'Menu/index',
     method: 'get'
   })
 }
 
 export const changeStatus = (status, id) => {
   return axios.request({
-    url: '/Menu/changeStatus',
+    url: 'Menu/changeStatus',
     method: 'get',
     params: {
-      status: status,
-      id: id
+      status,
+      id
     }
   })
 }
 
 export const add = (data) => {
   return axios.request({
-    url: '/Menu/add',
+    url: 'Menu/add',
     method: 'post',
     data
   })
@@ -28,7 +28,7 @@ export const add = (data) => {
 
 export const edit = (data) => {
   return axios.request({
-    url: '/Menu/edit',
+    url: 'Menu/edit',
     method: 'post',
     data
   })
@@ -36,10 +36,10 @@ export const edit = (data) => {
 
 export const del = (id) => {
   return axios.request({
-    url: '/Menu/del',
+    url: 'Menu/del',
     method: 'get',
     params: {
-      id: id
+      id
     }
   })
 }

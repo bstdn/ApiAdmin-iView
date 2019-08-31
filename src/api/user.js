@@ -6,7 +6,7 @@ export const login = ({ username, password }) => {
     password
   }
   return axios.request({
-    url: '/Login/index',
+    url: 'Login/index',
     method: 'post',
     data
   })
@@ -14,7 +14,7 @@ export const login = ({ username, password }) => {
 
 export const getInfo = (token) => {
   return axios.request({
-    url: '/Login/getUserInfo',
+    url: 'Login/getUserInfo',
     method: 'get',
     params: {
       token
@@ -24,14 +24,14 @@ export const getInfo = (token) => {
 
 export const logout = () => {
   return axios.request({
-    url: '/Login/logout',
+    url: 'Login/logout',
     method: 'get'
   })
 }
 
 export const getList = (params) => {
   return axios.request({
-    url: '/User/index',
+    url: 'User/index',
     method: 'get',
     params
   })
@@ -39,18 +39,18 @@ export const getList = (params) => {
 
 export const changeStatus = (status, id) => {
   return axios.request({
-    url: '/User/changeStatus',
+    url: 'User/changeStatus',
     method: 'get',
     params: {
-      status: status,
-      id: id
+      status,
+      id
     }
   })
 }
 
 export const add = (data) => {
   return axios.request({
-    url: '/User/add',
+    url: 'User/add',
     method: 'post',
     data
   })
@@ -58,7 +58,7 @@ export const add = (data) => {
 
 export const edit = (data) => {
   return axios.request({
-    url: '/User/edit',
+    url: 'User/edit',
     method: 'post',
     data
   })
@@ -66,17 +66,17 @@ export const edit = (data) => {
 
 export const del = (id) => {
   return axios.request({
-    url: '/User/del',
+    url: 'User/del',
     method: 'get',
     params: {
-      id: id
+      id
     }
   })
 }
 
 export const own = (data) => {
   return axios.request({
-    url: '/User/own',
+    url: 'User/own',
     method: 'post',
     data
   })
@@ -84,7 +84,7 @@ export const own = (data) => {
 
 export const getUsers = (params) => {
   return axios.request({
-    url: '/User/getUsers',
+    url: 'User/getUsers',
     method: 'get',
     params
   })
