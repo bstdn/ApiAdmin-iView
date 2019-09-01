@@ -8,6 +8,7 @@ export default {
   SystemLog: '操作日志',
   AppSetting: '应用接入',
   AppGroup: '应用分组',
+  AppList: '应用列表',
   InterfaceSetting: '接口设置',
   InterfaceGroup: '接口分组',
   InterfaceList: '接口列表',

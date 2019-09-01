@@ -2,7 +2,7 @@ import axios from '@/libs/api.request'
 
 export const getList = (params) => {
   return axios.request({
-    url: 'AppGroup/index',
+    url: 'App/index',
     method: 'get',
     params
   })
@@ -10,7 +10,7 @@ export const getList = (params) => {
 
 export const changeStatus = (status, id) => {
   return axios.request({
-    url: 'AppGroup/changeStatus',
+    url: 'App/changeStatus',
     method: 'get',
     params: {
       status,
@@ -21,7 +21,7 @@ export const changeStatus = (status, id) => {
 
 export const add = (data) => {
   return axios.request({
-    url: 'AppGroup/add',
+    url: 'App/add',
     method: 'post',
     data
   })
@@ -29,25 +29,35 @@ export const add = (data) => {
 
 export const edit = (data) => {
   return axios.request({
-    url: 'AppGroup/edit',
+    url: 'App/edit',
     method: 'post',
     data
   })
 }
 
-export const del = (hash) => {
+export const del = (id) => {
   return axios.request({
-    url: 'AppGroup/del',
+    url: 'App/del',
     method: 'get',
     params: {
-      hash
+      id
     }
   })
 }
 
-export const getAll = () => {
+export const getAppInfo = (id) => {
   return axios.request({
-    url: 'AppGroup/getAll',
+    url: 'App/getAppInfo',
+    method: 'get',
+    params: {
+      id
+    }
+  })
+}
+
+export const refreshAppSecretApi = () => {
+  return axios.request({
+    url: 'App/refreshAppSecret',
     method: 'get'
   })
 }

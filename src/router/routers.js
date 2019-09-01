@@ -103,7 +103,7 @@ export default [
     meta: {
       icon: 'md-cloud',
       title: '应用接入',
-      access: ['admin/AppGroup/index']
+      access: ['admin/AppGroup/index', 'admin/App/index']
     },
     component: Main,
     children: [
@@ -116,6 +116,16 @@ export default [
           access: 'admin/AppGroup/index'
         },
         component: () => import('@/view/app/group')
+      },
+      {
+        path: 'appsList',
+        name: 'AppList',
+        meta: {
+          icon: 'md-list-box',
+          title: '应用列表',
+          access: 'admin/App/index'
+        },
+        component: () => import('@/view/app/list')
       }
     ]
   },

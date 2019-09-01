@@ -8,6 +8,7 @@ export default {
   SystemLog: 'Logs',
   AppSetting: 'Apps Setting',
   AppGroup: 'Apps Group',
+  AppList: 'Apps List',
   InterfaceSetting: 'Interface Setting',
   InterfaceGroup: 'Interface Group',
   InterfaceList: 'Interface List',
