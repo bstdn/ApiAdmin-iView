@@ -1,5 +1,9 @@
 # vue-iview-api-admin
 
+## 特别提示
+
+> 本项目由`vue-cli`构建，依赖于[php-thinkphp-api-admin](https://github.com/bstdn/php-thinkphp-api-admin)
+
 ## Install
 
 ### Clone the project
@@ -44,3 +48,10 @@ npm run build
 ```
 npm run lint
 ```
+
+## 相关技术栈
+
+- [iView-Admin](https://github.com/iview/iview-admin)
+- [iView](https://github.com/iview/iview)
+- [Vue](https://github.com/vuejs/vue)
+- [Webpack](https://github.com/webpack/webpack)
