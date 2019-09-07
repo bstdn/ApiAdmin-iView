@@ -23,5 +23,7 @@ export default {
   close_choose: 'Close',
   show_choose: 'Show',
   hide_choose: 'Hide',
-  user_center: 'User Center'
+  user_center: 'User Center',
+  wiki_login: 'Wiki Login',
+  WikiList: 'Wiki Center'
 }

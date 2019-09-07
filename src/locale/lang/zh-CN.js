@@ -23,5 +23,7 @@ export default {
   close_choose: '禁用',
   show_choose: '显示',
   hide_choose: '隐藏',
-  user_center: '个人中心'
+  user_center: '个人中心',
+  wiki_login: '文档登录',
+  WikiList: '文档中心'
 }

@@ -13,36 +13,49 @@ const router = new Router({
   routes: routes
 })
 
-const whiteList = ['/login']
+const whiteList = ['/login', '/wiki/login']
 
 router.beforeEach((to, from, next) => {
   iView.LoadingBar.start()
   if (getToken()) {
-    if (to.path === '/login') {
-      next({ path: '/' })
-      iView.LoadingBar.finish()
-    } else {
-      store.dispatch('user/getInfo').then(user => {
-        if (to.meta && to.meta.access) {
-          if (oneOf(to.meta.access, user.access)) {
-            next()
-          } else {
-            next({ replace: true, name: 'error_401' })
-          }
-        } else {
-          next()
-        }
-      }).catch(() => {
-        setToken('')
-        next(`/login?redirect=${to.path}`)
+    if (to.path.indexOf('/wiki') === -1) {
+      if (to.path === '/login') {
+        next({ path: '/' })
         iView.LoadingBar.finish()
-      })
+      } else {
+        store.dispatch('user/getInfo').then(user => {
+          if (to.meta && to.meta.access) {
+            if (oneOf(to.meta.access, user.access)) {
+              next()
+            } else {
+              next({ replace: true, name: 'error_401' })
+            }
+          } else {
+            next()
+          }
+        }).catch(() => {
+          setToken('')
+          next(`/login?redirect=${to.path}`)
+          iView.LoadingBar.finish()
+        })
+      }
+    } else {
+      if (to.path === '/wiki/login') {
+        next({ path: '/wiki/list' })
+        iView.LoadingBar.finish()
+      } else {
+        next()
+      }
     }
   } else {
     if (whiteList.indexOf(to.path) !== -1) {
       next()
     } else {
-      next(`/login?redirect=${to.path}`)
+      if (to.path.indexOf('/wiki') === -1) {
+        next(`/login?redirect=${to.path}`)
+      } else {
+        next(`/wiki/login?redirect=${to.path}`)
+      }
       iView.LoadingBar.finish()
     }
   }

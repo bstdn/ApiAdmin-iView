@@ -59,6 +59,7 @@ export default {
         if (valid) {
           this.loading = true
           this.$store.dispatch('user/login', this.form).then(() => {
+            sessionStorage.setItem('ApiAdmin_AppInfo', '管理员')
             this.$router.push({ path: this.redirect || '/' })
             this.loading = false
           }).catch(() => {

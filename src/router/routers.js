@@ -1,4 +1,5 @@
 import Main from '@/components/main'
+import Wiki from '@/components/wiki'
 
 export default [
   {
@@ -177,6 +178,36 @@ export default [
           hideInMenu: true
         },
         component: () => import('@/view/interface/response')
+      }
+    ]
+  },
+  {
+    path: '/wiki/login',
+    name: 'wiki_login',
+    meta: {
+      title: '文档登录',
+      hideInMenu: true
+    },
+    component: () => import('@/view/wiki/login')
+  },
+  {
+    path: '/wiki',
+    name: 'wiki',
+    redirect: '/wiki/list',
+    meta: {
+      title: '文档',
+      hideInMenu: true
+    },
+    component: Wiki,
+    children: [
+      {
+        path: 'list',
+        name: 'WikiList',
+        meta: {
+          title: '文档列表',
+          hideInMenu: true
+        },
+        component: () => import('@/view/wiki/list')
       }
     ]
   },
