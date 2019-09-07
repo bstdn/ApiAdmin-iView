@@ -33,6 +33,7 @@
           <p slot="title" style="height: 32px">
             <Button type="primary" @click="alertAdd" icon="md-add">{{ $t('add_button') }}</Button>
             <Button type="warning" class="margin-left-5" @click="confirmRefresh = true" icon="md-refresh">刷新路由</Button>
+            <Button type="info" class="margin-left-5" to="/wiki/list" icon="md-bookmarks">接口文档</Button>
           </p>
           <div>
             <Table :columns="columnsList" :data="tableData" border disabled-hover />

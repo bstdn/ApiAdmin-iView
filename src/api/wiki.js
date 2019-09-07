@@ -8,6 +8,28 @@ export const login = (data) => {
   })
 }
 
+export const apiGroup = () => {
+  return axios.request({
+    url: 'Api/groupList',
+    method: 'get'
+  })
+}
+
+export const errorCode = () => {
+  return axios.request({
+    url: 'Api/errorCode',
+    method: 'get'
+  })
+}
+
+export const detail = (params) => {
+  return axios.request({
+    url: 'Api/detail',
+    method: 'get',
+    params
+  })
+}
+
 export const logout = () => {
   return axios.request({
     url: 'Api/logout',

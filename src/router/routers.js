@@ -208,6 +208,24 @@ export default [
           hideInMenu: true
         },
         component: () => import('@/view/wiki/list')
+      },
+      {
+        path: 'error',
+        name: 'WikiError',
+        meta: {
+          title: '错误码',
+          hideInMenu: true
+        },
+        component: () => import('@/view/wiki/error-code')
+      },
+      {
+        path: 'calculation',
+        name: 'WikiCalculation',
+        meta: {
+          title: '算法详解',
+          hideInMenu: true
+        },
+        component: () => import('@/view/wiki/calculation')
       }
     ]
   },

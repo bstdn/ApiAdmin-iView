@@ -7,6 +7,14 @@
           <Icon type="md-list-box" />
           接口列表
         </MenuItem>
+        <MenuItem name="error" to="/wiki/error">
+          <Icon type="logo-markdown" />
+          错误码
+        </MenuItem>
+        <MenuItem name="calculation" to="/wiki/calculation">
+          <Icon type="ios-analytics" />
+          算法详解
+        </MenuItem>
         <Submenu name="4">
           <template slot="title">
             <Icon type="ios-contact" />
@@ -63,7 +71,7 @@ export default {
 }
 
 .wiki-nav {
-  width: 300px;
+  width: 530px;
   margin: 0 0 0 auto;
 }
 

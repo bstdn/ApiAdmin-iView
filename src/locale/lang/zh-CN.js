@@ -25,5 +25,7 @@ export default {
   hide_choose: '隐藏',
   user_center: '个人中心',
   wiki_login: '文档登录',
-  WikiList: '文档中心'
+  WikiList: '文档中心',
+  WikiError: '错误码',
+  WikiCalculation: '算法详解'
 }

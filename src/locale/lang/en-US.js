@@ -25,5 +25,7 @@ export default {
   hide_choose: 'Hide',
   user_center: 'User Center',
   wiki_login: 'Wiki Login',
-  WikiList: 'Wiki Center'
+  WikiList: 'Wiki Center',
+  WikiError: 'Wiki Error',
+  WikiCalculation: 'Wiki Calculation'
 }
