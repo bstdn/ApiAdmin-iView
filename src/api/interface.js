@@ -8,13 +8,13 @@ export const getList = (params) => {
   })
 }
 
-export const changeStatus = (status, id) => {
+export const changeStatus = (status, hash) => {
   return axios.request({
     url: 'InterfaceList/changeStatus',
     method: 'get',
     params: {
       status,
-      id
+      hash
     }
   })
 }

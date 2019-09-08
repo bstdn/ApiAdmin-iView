@@ -1,6 +1,6 @@
 {
   "name": "vue-iview-admin",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "A minimal vue admin template with iView UI & axios & permission control & lint",
   "author": "何秀钢 <xiugang.he@chukou1.com>",
   "private": true,

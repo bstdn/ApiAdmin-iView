@@ -1,3 +1,9 @@
+<p align="center">
+    <a href="https://cn.vuejs.org">
+        <img width="200" src="https://cn.vuejs.org/images/logo.png">
+    </a>
+</p>
+
 # vue-iview-api-admin
 
 ## 特别提示
@@ -22,7 +28,7 @@ cd vue-iview-api-admin
 ### Project setup
 
 ```
-npm install
+npm install // or yarn
 
 # 国内
 npm install --registry=https://registry.npm.taobao.org
@@ -31,10 +37,10 @@ npm install --registry=https://registry.npm.taobao.org
 ### Compiles and hot-reloads for development
 
 ```
-npm run dev
+npm run dev // or yarn dev
 
 # 指定端口
-npm run dev --port=8080
+npm run dev --port=8080 // or yarn dev --port=8080
 ```
 
 ### Compiles and minifies for production
@@ -55,3 +61,11 @@ npm run lint
 - [iView](https://github.com/iview/iview)
 - [Vue](https://github.com/vuejs/vue)
 - [Webpack](https://github.com/webpack/webpack)
+
+## 效果展示
+
+![输入图片说明](https://gitee.com/bstdn/codes/zawb1ye9frchxokpi8u5319/raw?blob_name=menu.png "menu.png")
+
+![输入图片说明](https://gitee.com/bstdn/codes/zawb1ye9frchxokpi8u5319/raw?blob_name=appslist.png "appslist.png")
+
+![输入图片说明](https://gitee.com/bstdn/codes/zawb1ye9frchxokpi8u5319/raw?blob_name=interfaceList.png "interfaceList.png")

@@ -34,7 +34,7 @@ export default [
       },
       {
         path: '/user-center',
-        name: 'OwnIndex',
+        name: 'user_center',
         meta: {
           hideInMenu: true,
           title: '个人中心',

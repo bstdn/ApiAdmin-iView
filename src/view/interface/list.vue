@@ -366,8 +366,12 @@ export default {
         id: 0
       },
       ruleValidate: {
-        apiClass: [{ required: true, message: '真实类库不能为空', trigger: 'blur' }],
-        info: [{ required: true, message: '接口名称不能为空', trigger: 'blur' }]
+        info: [
+          { required: true, message: '接口名称不能为空', trigger: 'blur' }
+        ],
+        api_class: [
+          { required: true, message: '真实类库不能为空', trigger: 'blur' }
+        ]
       }
     }
   },

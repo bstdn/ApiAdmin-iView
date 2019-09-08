@@ -4,7 +4,7 @@ import { getToken } from '@/libs/util'
 import store from '@/store'
 import config from '@/config'
 
-export const baseUrl = (process.env.NODE_ENV === 'development' ? config.baseUrl.dev : config.baseUrl.pro).trimRight('/') + '/admin'
+export const baseUrl = (process.env.NODE_ENV === 'development' ? config.baseUrl.dev : config.baseUrl.pro) + '/admin'
 
 class HttpRequest {
   constructor(baseUrl) {

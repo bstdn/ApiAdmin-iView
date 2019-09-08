@@ -304,7 +304,7 @@ export default {
       },
       ruleValidate: {
         app_name: [
-          { required: true, message: '用户名不能为空', trigger: 'blur' }
+          { required: true, message: '应用名称不能为空', trigger: 'blur' }
         ]
       },
       checkAllStatus: {},
