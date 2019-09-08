@@ -69,3 +69,9 @@ npm run lint
 ![输入图片说明](https://gitee.com/bstdn/codes/zawb1ye9frchxokpi8u5319/raw?blob_name=appslist.png "appslist.png")
 
 ![输入图片说明](https://gitee.com/bstdn/codes/zawb1ye9frchxokpi8u5319/raw?blob_name=interfaceList.png "interfaceList.png")
+
+## License
+
+[MIT](https://github.com/bstdn/vue-iview-api-admin/blob/master/LICENSE)
+
+Copyright (c) 2019-present, bstdn
