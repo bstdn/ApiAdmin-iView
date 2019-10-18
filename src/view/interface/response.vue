@@ -170,9 +170,6 @@ export default {
             return h('Tag', {
               attrs: {
                 color: 'primary'
-              },
-              style: {
-                width: '60px'
               }
             }, this.tableShow.dataType[type])
           }

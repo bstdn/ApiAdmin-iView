@@ -14,7 +14,7 @@
           </FormItem>
           <FormItem label="用户昵称" prop="nickname">
             <div style="display: inline-block;width: 300px">
-              <Input v-model="formItem.nickname" />
+              <Input v-model="formItem.nickname" placeholder="请输入昵称" />
             </div>
           </FormItem>
           <FormItem label="用户头像" prop="headImg">
@@ -127,7 +127,7 @@ export default {
       },
       ruleValidate: {
         nickname: [
-          { required: true, message: '请输入姓名', trigger: 'blur' }
+          { required: true, message: '请输入用户昵称', trigger: 'blur' }
         ],
         password: [
           { min: 6, message: '请至少输入6个字符', trigger: 'blur' },

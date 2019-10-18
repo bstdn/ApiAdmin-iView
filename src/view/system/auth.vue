@@ -287,7 +287,7 @@ export default {
           key: 'username'
         },
         {
-          title: '真实姓名',
+          title: '用户昵称',
           align: 'center',
           key: 'nickname',
           width: 90

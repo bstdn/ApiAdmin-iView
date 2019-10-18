@@ -13,7 +13,7 @@
             <FormItem style="margin-bottom: 0">
               <Select v-model="searchConf.type" clearable placeholder="请选择类别" style="width: 100px">
                 <Option :value="1">用户账号</Option>
-                <Option :value="2">真实姓名</Option>
+                <Option :value="2">用户昵称</Option>
               </Select>
             </FormItem>
             <FormItem style="margin-bottom: 0">
@@ -59,8 +59,8 @@
         <FormItem label="用户账号" prop="username">
           <Input v-model="formItem.username" placeholder="请输入账号" />
         </FormItem>
-        <FormItem label="真实姓名" prop="nickname">
-          <Input v-model="formItem.nickname" placeholder="请输入账号" />
+        <FormItem label="用户昵称" prop="nickname">
+          <Input v-model="formItem.nickname" placeholder="请输入昵称" />
         </FormItem>
         <FormItem label="用户密码" prop="password">
           <Input v-model="formItem.password" type="password" placeholder="用户密码" />
@@ -155,7 +155,7 @@ export default {
           minWidth: 120
         },
         {
-          title: '真实姓名',
+          title: '用户昵称',
           align: 'center',
           key: 'nickname',
           width: 120

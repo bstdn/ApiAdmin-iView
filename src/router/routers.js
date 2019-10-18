@@ -166,7 +166,8 @@ export default [
         name: 'InterfaceRequest',
         meta: {
           title: '请求参数',
-          hideInMenu: true
+          hideInMenu: true,
+          notCache: true
         },
         component: () => import('@/view/interface/request')
       },
@@ -175,7 +176,8 @@ export default [
         name: 'InterfaceResponse',
         meta: {
           title: '返回参数',
-          hideInMenu: true
+          hideInMenu: true,
+          notCache: true
         },
         component: () => import('@/view/interface/response')
       }
