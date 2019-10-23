@@ -183,7 +183,7 @@ export default {
         },
         {
           title: '类型',
-          width: '100px',
+          width: 100,
           render: (h, params) => {
             return h('Tag', {
               props: {
@@ -194,7 +194,7 @@ export default {
         },
         {
           title: '字段属性',
-          width: '90px',
+          width: 110,
           render: (h, params) => {
             if (params.row.is_must === 1) {
               return h('Tag', {
@@ -323,7 +323,7 @@ export default {
         }
         vm.header_data = [{
           is_must: res.apiList.access_token,
-          field_name: 'access_token',
+          field_name: 'access-token',
           info: 'APP认证秘钥【请在Header头里面传递】',
           data_type: 2
         }]
