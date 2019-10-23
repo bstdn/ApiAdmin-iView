@@ -1,5 +1,5 @@
 import axios from 'axios'
-import iView from 'iview'
+import iView from 'view-design'
 import { getToken } from '@/libs/util'
 import store from '@/store'
 import config from '@/config'

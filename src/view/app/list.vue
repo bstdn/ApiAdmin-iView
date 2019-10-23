@@ -221,7 +221,7 @@ export default {
           title: 'AppSecret',
           align: 'center',
           key: 'app_secret',
-          width: 285
+          width: 320
         },
         {
           title: '应用说明',
@@ -266,7 +266,7 @@ export default {
         {
           title: '操作',
           align: 'center',
-          width: 175,
+          width: 200,
           render: (h, params) => {
             return h('div', [
               editButton(this, h, params.row, params.index),

@@ -158,12 +158,12 @@ export default {
           title: '应用组标识',
           align: 'center',
           key: 'hash',
-          width: 130
+          width: 140
         },
         {
           title: '应用组状态',
           align: 'center',
-          width: 100,
+          width: 120,
           render: (h, params) => {
             const vm = this
             return h('i-switch', {
@@ -197,7 +197,7 @@ export default {
         {
           title: '操作',
           align: 'center',
-          width: 180,
+          width: 200,
           render: (h, params) => {
             return h('div', [
               editButton(this, h, params.row, params.index),

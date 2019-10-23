@@ -126,7 +126,7 @@ export default {
         {
           title: '执行时间',
           align: 'center',
-          width: 160,
+          width: 170,
           render: (h, params) => {
             return h('span', getDate(params.row.add_time, 'year'))
           }

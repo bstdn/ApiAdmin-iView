@@ -6,7 +6,7 @@
         个人信息
       </p>
       <div>
-        <Form ref="myForm" :rules="ruleValidate" :model="formItem" :label-width="80">
+        <Form ref="myForm" :rules="ruleValidate" :model="formItem" :label-width="90">
           <FormItem label="用户账号" prop="username">
             <div style="display: inline-block;width: 300px">
               <Input v-model="username" disabled />

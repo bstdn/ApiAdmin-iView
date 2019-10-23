@@ -157,7 +157,7 @@ export default {
         {
           title: '是否必须',
           align: 'center',
-          width: 90,
+          width: 100,
           render: (h, params) => {
             if (params.row.is_must === 1) {
               return h('Tag', {

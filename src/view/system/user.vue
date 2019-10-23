@@ -158,7 +158,7 @@ export default {
           title: '用户昵称',
           align: 'center',
           key: 'nickname',
-          width: 120
+          width: 160
         },
         {
           title: '登录次数',
@@ -166,7 +166,7 @@ export default {
           render: (h, params) => {
             return h('span', params.row.userData === null ? '' : params.row.userData.login_times)
           },
-          width: 90
+          width: 100
         },
         {
           title: '最后登录时间',
@@ -174,7 +174,7 @@ export default {
           render: (h, params) => {
             return h('span', params.row.userData === null ? '' : params.row.userData.last_login_time)
           },
-          width: 160
+          width: 170
         },
         {
           title: '最后登录IP',

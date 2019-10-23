@@ -58,7 +58,7 @@
         <Icon type="md-alert" />
         <span>{{formItem.id ? '编辑' : '新增'}}接口</span>
       </p>
-      <Form ref="myForm" :rules="ruleValidate" :model="formItem" :label-width="80">
+      <Form ref="myForm" :rules="ruleValidate" :model="formItem" :label-width="90">
         <FormItem label="接口名称" prop="info">
           <Input v-model="formItem.info" placeholder="请输入接口名称" />
         </FormItem>
@@ -253,12 +253,12 @@ export default {
           title: '接口映射',
           align: 'center',
           key: 'hash',
-          width: 130
+          width: 140
         },
         {
           title: '请求方式',
           align: 'center',
-          width: 90,
+          width: 95,
           render: (h, params) => {
             if (params.row.isTest === 1) {
               return h('tag', {
@@ -327,7 +327,7 @@ export default {
         {
           title: '操作',
           align: 'center',
-          minWidth: 355,
+          minWidth: 375,
           render: (h, params) => {
             return h('div', [
               editButton(this, h, params.row, params.index),

@@ -13,7 +13,7 @@
     "axios": "0.19.0",
     "core-js": "2.6.9",
     "highlight.js": "9.15.10",
-    "iview": "3.4.2",
+    "view-design": "4.0.0",
     "js-cookie": "2.2.0",
     "vue": "2.6.10",
     "vue-i18n": "8.12.0",

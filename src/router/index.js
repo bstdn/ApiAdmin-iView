@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import routes from './routers'
 import store from '@/store'
-import iView from 'iview'
+import iView from 'view-design'
 import { setToken, getToken, setTitle } from '@/libs/util'
 import { oneOf } from '@/libs/tools'
 

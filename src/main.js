@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-import iView from 'iview'
+import iView from 'view-design'
 
 import './styles/index.less'
 
