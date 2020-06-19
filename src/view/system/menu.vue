@@ -7,7 +7,7 @@
             <Button type="primary" icon="md-add" @click="alertAdd">{{ $t('add_button') }}</Button>
           </p>
           <div>
-            <Table :columns="columnsList" :data="tableData" border disabled-hover />
+            <Table row-key="id" :columns="columnsList" :data="tableData" border disabled-hover />
           </div>
         </Card>
       </Col>
@@ -24,7 +24,7 @@
         <FormItem label="父级菜单" prop="fid">
           <Select v-model="formItem.fid" filterable>
             <Option :value="0">顶级菜单</Option>
-            <Option v-for="item in tableData" :key="item.id" :value="item.id">{{ item.showName }}</Option>
+            <Option v-for="item in selectOption" :key="item.id" :value="item.id">{{ item.showName }}</Option>
           </Select>
         </FormItem>
         <FormItem label="菜单URL" prop="url">
@@ -69,7 +69,7 @@ const editButton = (vm, h, currentRow, index) => {
     }
   }, vm.$t('edit_button'))
 }
-const deleteButton = (vm, h, currentRow, index) => {
+const deleteButton = (vm, h, currentRow) => {
   return h('Poptip', {
     props: {
       confirm: true,
@@ -79,7 +79,7 @@ const deleteButton = (vm, h, currentRow, index) => {
     on: {
       'on-ok': () => {
         del(currentRow.id).then(response => {
-          vm.tableData.splice(index, 1)
+          vm.getList()
           vm.$Message.success(response.msg)
         })
         currentRow.loading = false
@@ -105,15 +105,10 @@ export default {
     return {
       columnsList: [
         {
-          title: '序号',
-          type: 'index',
-          width: 65,
-          align: 'center'
-        },
-        {
           title: '菜单名称',
           align: 'left',
-          key: 'showName'
+          key: 'name',
+          tree: true
         },
         {
           title: '排序',
@@ -175,6 +170,7 @@ export default {
         }
       ],
       tableData: [],
+      selectOption: [],
       modalSetting: {
         show: false,
         loading: false,
@@ -240,6 +236,7 @@ export default {
     getList() {
       getList().then(response => {
         this.tableData = response.data.list
+        this.selectOption = response.data.choose
       })
     }
   }
