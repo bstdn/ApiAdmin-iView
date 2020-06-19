@@ -21,7 +21,7 @@ class HttpRequest {
     // 响应拦截
     instance.interceptors.response.use(response => {
       const res = response.data
-      if (res.code !== 0) {
+      if (res.code !== 1) {
         if (res.code === -14) {
           iView.Modal.confirm({
             title: '重新登录',
