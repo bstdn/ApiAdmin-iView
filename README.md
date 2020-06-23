@@ -4,19 +4,19 @@
     </a>
 </p>
 
-# vue-iview-api-admin
+# ApiAdmin-iView
 
 ## 特别提示
 
-> 本项目由`vue-cli`构建，依赖于[php-thinkphp-api-admin](https://github.com/bstdn/php-thinkphp-api-admin)
+> 本项目由`vue-cli`构建，依赖于[ApiAdmin-ThinkPHP](https://github.com/bstdn/ApiAdmin-ThinkPHP)
 
 ## Install
 
 ### Clone the project
 
 ```
-git clone https://github.com/bstdn/vue-iview-api-admin.git
-cd vue-iview-api-admin
+git clone https://github.com/bstdn/ApiAdmin-iView.git
+cd ApiAdmin-iView
 ```
 
 ### Prepare
@@ -78,6 +78,6 @@ npm run lint
 
 ## License
 
-[MIT](https://github.com/bstdn/vue-iview-api-admin/blob/master/LICENSE)
+[MIT](https://github.com/bstdn/ApiAdmin-iView/blob/master/LICENSE)
 
 Copyright (c) 2019-present, bstdn
